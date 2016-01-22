@@ -1,17 +1,122 @@
-<nav class="navbar navbar-static-top">
-    <div class="container">
-        <div class="navbar-header">
-            <fullstack-logo></fullstack-logo>
-        </div>
-        <ul class="nav navbar-nav">
-            <li ng-repeat="item in items" ng-show="!item.auth || isLoggedIn()">
-                <a ui-sref-active="active" ui-sref="{{ item.state }}">{{ item.label }}</a>
-            </li>
-        </ul>
-        <button ng-show="!user" ui-sref="login" class="btn login-button">Login</button>
-        <div ng-show="user" class="welcome">
-            <span>Welcome, {{ user.email }}!</span>
-            <a ng-click="logout()">Logout</a>
-        </div>
-    </div>
+<nav class="bs-sidenav" bs-scrollspy>
+    <div class="title">JULIE OPPERMANN</div>
+    <ul class="navbar nav nav-stacked fixed" id="sidebar">
+        <li data-target="#Exhibitions" bs-scrollspy>
+            <a href="#Exhibitions">Exhibition Views</a>
+            <ul class="nav nav-stacked">
+                <li data-target="#SoloExhibitions" bs-scrollspy>
+                    <a href="#SoloExhibitions">Solo Exhibitions</a>
+                    <ul class="nav nav-stacked">
+                        <li data-target="#anExhibition"><a>an exhibition</a></li>
+                        <li ng-repeat="exhibition in soloExhibitions"><a href="#{{exhibition.title | year}}"></a>{{exhibition.title}}</li>
+                    </ul>
+                </li>
+                <li data-target="#GroupExhibitions" bs-scrollspy>
+                    <a href="#GroupExhibitions">Group Exhibitions</a>
+                    <ul class="nav nav-stacked">
+                        <li data-target="#anExhibition"><a>an exhibition</a></li>
+                        <li ng-repeat="exhibition in groupExhibitions"><a href="#{{exhibition.title | year}}"></a>{{exhibition.title}}</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li data-target="#Paintings" bs-scrollspy>
+            <a href="#Paintings">Paintings</a>
+            <ul class="nav nav-stacked">
+                <li data-target="#LargePaintings" bs-scrollspy>
+                    <a href="#LargePaintings">Large Paintings</a>
+                    <ul class="nav nav-stacked">
+                        <li><a>year in paintings</a></li>
+                        <li ng-repeat="year in largePaintings.years"><a href="#year">{{year}}</a>
+                            <ul class="nav nav-stacked">
+                                <li ng-repeat="largePainting in year"><a href="#{{largePainting.title | title}}"></a>{{largePainting.title}}</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li data-target="#SmallPaintings" bs-scrollspy>
+                    <a href="#SmallPaintings" >Small Paintings</a>
+                    <ul class="nav nav-stacked">
+                        <li><a>year in sm-paintings</a></li>
+                        <li ng-repeat="year in smallPaintings.years"><a href="#year">{{year}}</a>
+                            <ul class="nav nav-stacked">
+                                <li ng-repeat="smallPainting in year"><a href="#{{smallPainting.title | title}}"></a>{{smallPainting.title}}</li>
+                            </ul>
+                        </li>
+                    </ul>
+                <li>
+            </ul>
+        </li>
+        <li data-target="#WorksOnPaper" bs-scrollspy>
+            <a href="#WorksOnPaper">Works on paper</a>
+            <ul class="nav nav-stacked">
+                <li data-target="#Silkscreen" bs-scrollspy>
+                    <a href="#Silkscreen">Silkscreen</a>
+                    <ul class="nav nav-stacked">
+                        <li><a>silkscreen project</a></li>
+                        <li ng-repeat="silkscreenProject in silkscreenProjects"><a href="#silkscreenProject">{{silkscreenProject}}</a>
+                            <ul class="nav nav-stacked">
+                                <li>silkscreen work</li>
+                                <li ng-repeat="work in silkscreenProject"><a href="#{{work.title | title}}"></a>{{work.title}}</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li data-target="#Etchings" bs-scrollspy>
+                    <a href="#Etchings">Etchings</a>
+                    <ul class="nav nav-stacked">
+                        <li ng-repeat="etchingProject in etchingProjects"><a href="#etchingProjects">{{etchingProject}}</a>
+                            <ul class="nav nav-stacked">
+                                <li ng-repeat="work in etchingProject"><a href="#{{work.title | title}}"></a>{{work.title}}</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li data-target="#PaintingsPaper" bs-scrollspy>
+                    <a href="#PaintingsPaper">Paintings</a>
+                    <ul class="nav nav-stacked">
+                        <li ng-repeat="painting in paintingsPaper"><a href="#{{painting.title | title}}"></a>{{painting.title}}</li>
+                    </ul>  
+                <li>
+            </ul>
+        </li>
+        <li data-target="#Installations" bs-scrollspy>
+            <a href="#Installations">Installations</a>
+            <ul class="nav nav-stacked">
+                <li ng-repeat="installation in installations"><a href="#installation">{{installation.title}}</a>
+                    <ul class="nav nav-stacked">
+                        <li ng-repeat="image in installation"><a href="#{{image | title}}"></a>{{image}}</li>
+                    </ul>
+                </li>
+            </ul>         
+        </li>
+        <li data-target="#VideoProjects" bs-scrollspy>
+            <a href="#VideoProjects">Videos</a>
+            <ul class="nav nav-stacked">
+                <li ng-repeat="videoProject in videoProjects"><a href="#videoProject.title">{{videoProject.title}}</a>
+                    <ul class="nav nav-stacked">
+                        <li ng-repeat="video in videoProject"><a href="#{{video | title}}"></a>{{video}}</li>
+                    </ul>
+                </li>
+            </ul>         
+        </li>
+        <li data-target="#Texts" bs-scrollspy>
+            <a href="#Texts">Texts</a>
+            <ul class="nav nav-stacked">
+                <li ng-repeat="text in texts"><a href="#text.title">{{text.title}}</a>
+                </li>
+            </ul>         
+        </li>
+         <li data-target="#CV" bs-scrollspy>
+            <a href="#CV">CV</a>      
+        </li>
+        <li data-target="#News" bs-scrollspy>
+            <a href="#News">News</a>
+        </li>
+        <li data-target="#Contact" bs-scrollspy>
+            <a href="#Contact">Contact</a>
+        </li>      
+    </ul>
+
+
 </nav>

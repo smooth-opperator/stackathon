@@ -1,28 +1,110 @@
+.title {
+  padding-left: none;
+  font-size: 1em;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
 navbar {
 
   display: block;
   background: white;
-  border-bottom: 1px solid black;
+   /*border-bottom: 1px solid black;
   box-shadow: 1px 1px 14px -3px black;
+*/
+  #sidebar {
+    
+  }
 
+  /* sidebar */
+  .bs-sidenav {
+      position: fixed;
+      padding-left: 20px;
+      margin-top: 20px;
+      /*margin-bottom: 20px;*/
+  }
+    /* all links */
+  .bs-sidenav .nav>li>a {
+    color: #999;
+    padding: 4px 20px;
+    font-weight: 500;
+  }
+    /* nested links */
+  .bs-sidenav .nav .nav>li>a {
+      padding-top: 1px;
+      padding-bottom: 1px;
+      padding-left: 30px;
+      font-weight: 300;
+  }
+     /* double-nested links */
+  .bs-sidenav .nav .nav .nav>li>a {
+      padding-top: 1px;
+      padding-bottom: 1px;
+      padding-left: 50px;
+      font-weight: 300;
+  }
+  /* active & hover links */
+  .bs-sidenav .nav>.active>a, 
+  .bs-sidenav .nav>li>a:hover, 
+  .bs-sidenav .nav>li>a:focus {
+      color: #563d7c;                 
+      text-decoration: none;          
+      background-color: transparent;  
+      border-left: 2px solid #563d7c; 
+  }
+  /* all active links */
+  .bs-sidenav .nav>.active>a, 
+  .bs-sidenav .nav>.active:hover>a,
+  .bs-sidenav .nav>.active:focus>a {
+      font-weight: 700;
+  }
+  /* nested active links */
+  .bs-sidenav .nav .nav>.active>a, 
+  .bs-sidenav .nav .nav>.active:hover>a,
+  .bs-sidenav .nav .nav>.active:focus>a {
+      font-weight: 500;
+  }
+
+    /* hide all (inactive) nested list */
+  .bs-sidenav .nav ul.nav {
+      /*display: none; */
+      display: none;
+
+  }
+  /* show active nested list */
+  .bs-sidenav .nav>.active>ul.nav {
+      display: block;
+
+  }
   .container {
     width: 91%;
     max-width: 1340px;
     padding-top: 20px;
   }
 
-  fullstack-logo {
+ /* fullstack-logo {
     margin-top: 5px;
     margin-right: 20px;
     width: 40px;
-  }
+  }*/
 
-  a {
+ /* a {
     color: black;
-    font-size: 16px;
-  }
-
+    text-decoration: none;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-size: 1em;
+     &:hover {
+      background: none;
+      color: #f31214;
+      text-decoration: none;
+    }
+  }*/
+/*
   .nav > li > a {
+    color: black;
+    text-decoration: none;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-size: 1em;
     cursor: pointer;
     transition: color 0.2s;
     &.active {
@@ -35,17 +117,17 @@ navbar {
     &:focus {
       background: none;
     }
-  }
-
+  }*/
+/*
   .login-button {
     float: right;
     border: 1px solid black;
     margin-top: 10px;
     background: none;
     outline: none !important;
-  }
+  }*/
 
-  .welcome {
+/*  .welcome {
     float: right;
     margin-top: 12px;
     span {
@@ -57,6 +139,6 @@ navbar {
       color: #f30046;
       cursor: pointer;
     }
-  }
+  }*/
 
 }

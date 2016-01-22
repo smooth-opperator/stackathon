@@ -3,4 +3,6 @@ app.config(function ($stateProvider) {
         url: '/',
         templateUrl: 'js/home/home.html'
     });
+
+    
 });
