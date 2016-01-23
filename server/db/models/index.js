@@ -6,4 +6,5 @@ require('./exhibitions');
 require('./paintings');
 require('./installations');
 require('./videos');
-require('./worksonpaper')
+require('./worksonpaper');
+require('./texts');

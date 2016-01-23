@@ -4,10 +4,11 @@ var _ = require('lodash');
 
 var schema = new mongoose.Schema({
     title: {type: String, required: true},
-    materials: {type: String, required: true},
-    dimensions: {type: [Number], required: true},
+    materials: {type: String},
+    dimensions: {type: [Number]},
     year: {type: Number, required: true},
-    onWebsite: {type: Boolean, required: true}
+    onWebsite: {type: Boolean, required: true},
+    video: {type: String}
 });
 
 

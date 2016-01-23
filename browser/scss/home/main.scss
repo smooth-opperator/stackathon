@@ -11,19 +11,26 @@
 }
 
 .group {
-    background: yellow;
+    background: #D3D3D3;
     margin-left: 5%;
     padding-top: 5%;
     padding-left: 5%;
     width: 90%;
-    height: 800px;
+    height: 100%;
 }
 .group .subgroup {
 	padding-top: 5%;
 	padding-left: 5%;
-    background: orange;
-    width: 95%;
-    height: 200px;
+  background: white;
+  width: 95%;
+  height: 100%;
+  display: block;
+  img {
+    padding-bottom: 20%;
+    display: block;
+    margin: auto;
+  }
+  
 }
 
 

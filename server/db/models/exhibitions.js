@@ -6,6 +6,7 @@ var schema = new mongoose.Schema({
     title: {type: String, required: true},
     gallery: {type: String},
     type: {
+        type: String,
         enum: ['Solo', 'Group']
     },
     artists: {type: [String]},
@@ -20,7 +21,7 @@ var schema = new mongoose.Schema({
         city: {type: String},
         state: {type: String}
     },
-    images: {type: [String], required: true},
+    images: {type: [String]},
     onWebsite: {type: Boolean, required: true},
     text: {type: String}
 });

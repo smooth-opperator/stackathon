@@ -1,6 +1,7 @@
 var router = require('express').Router();
 module.exports = router;
 var _ = require('lodash');
+var Texts = require('mongoose').model('Texts');
 
 router.get('/', function(req,res,next){
 	Texts.find({onWebsite: true}).exec()

@@ -6,10 +6,15 @@ var schema = new mongoose.Schema({
     title: {type: String, required: true},
     series: {type: String},
     category: {
+        type: String,
         enum: ['Silkscreen', 'Etching', 'Painting', 'Drawing']
     },
     materials: {type: String, required: true},
     dimensions: {type: [Number], required: true},
+    unit: {
+        type: String,
+        enum: ['in', 'cm']
+    },
     year: {type: Number, required: true, min: 2004, max:2050},
     sold: {type: Boolean},
     price: {type: Number},

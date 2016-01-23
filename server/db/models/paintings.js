@@ -4,11 +4,17 @@ var _ = require('lodash');
 
 var schema = new mongoose.Schema({
     title: {type: String, required: true},
+    series: {type: String},
     materials: {type: String, required: true},
     scale: {
+        type: String,
         enum: ['Large', 'Small']
         },
     dimensions: {type: [Number], required: true},
+    unit: {
+        type: String,
+        enum: ['in', 'cm']
+    },
     year: {type: Number, required: true, min: 2004, max:2050},
     sold: {type: Boolean},
     price: {type: Number},

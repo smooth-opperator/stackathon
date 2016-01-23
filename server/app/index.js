@@ -2,6 +2,7 @@
 var path = require('path');
 var express = require('express');
 var app = express();
+var bodyParser = require('body-parser');
 module.exports = app;
 
 // Pass our express application pipeline into the configuration
@@ -12,7 +13,8 @@ require('./configure')(app);
 // /api so they are isolated from our GET /* wildcard.
 app.use('/api', require('./routes'));
 
-
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 /*
  This middleware will catch any URLs resembling a file extension
  for example: .js, .html, .css
@@ -28,6 +30,8 @@ app.use(function (req, res, next) {
     }
 
 });
+
+app.use(express.static('./browser/images'));
 
 app.get('/*', function (req, res) {
     res.sendFile(app.get('indexHTMLPath'));

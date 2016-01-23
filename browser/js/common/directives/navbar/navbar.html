@@ -7,15 +7,17 @@
                 <li data-target="#SoloExhibitions" bs-scrollspy>
                     <a href="#SoloExhibitions">Solo Exhibitions</a>
                     <ul class="nav nav-stacked">
-                        <li data-target="#anExhibition"><a>an exhibition</a></li>
-                        <li ng-repeat="exhibition in soloExhibitions"><a href="#{{exhibition.title | year}}"></a>{{exhibition.title}}</li>
+                        <li data-target="#anExhibition" ><a>an exhibition</a></li>
+                        <li ng-repeat="exhibition in soloExhibitions | orderBy: exhibition.dates.year">
+                            <a href="#{{exhibition.title}}">{{exhibition.title}}</a>
+                        </li>
                     </ul>
                 </li>
                 <li data-target="#GroupExhibitions" bs-scrollspy>
                     <a href="#GroupExhibitions">Group Exhibitions</a>
                     <ul class="nav nav-stacked">
-                        <li data-target="#anExhibition"><a>an exhibition</a></li>
-                        <li ng-repeat="exhibition in groupExhibitions"><a href="#{{exhibition.title | year}}"></a>{{exhibition.title}}</li>
+                        <li data-target="#anExhibition" ><a>an exhibition</a></li>
+                        <li ng-repeat="exhibition in groupExhibitions | orderBy: exhibition.year" ><a href="#{{exhibition.title}}">{{exhibition.title}}</a></li>
                     </ul>
                 </li>
             </ul>
@@ -26,10 +28,11 @@
                 <li data-target="#LargePaintings" bs-scrollspy>
                     <a href="#LargePaintings">Large Paintings</a>
                     <ul class="nav nav-stacked">
-                        <li><a>year in paintings</a></li>
-                        <li ng-repeat="year in largePaintings.years"><a href="#year">{{year}}</a>
+                        <li ng-repeat="year in largePaintings.years | orderBy: year : true" >
+                            <a href="#year" >{{year}}</a>
                             <ul class="nav nav-stacked">
-                                <li ng-repeat="largePainting in year"><a href="#{{largePainting.title | title}}"></a>{{largePainting.title}}</li>
+                                <li data-target="#apainting"><a>a painting from this year</a></li>
+                                <li ng-repeat="painting in largePaintings | filter: year"><a href="#{{painting.title}}">{{painting.title}}</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -40,7 +43,7 @@
                         <li><a>year in sm-paintings</a></li>
                         <li ng-repeat="year in smallPaintings.years"><a href="#year">{{year}}</a>
                             <ul class="nav nav-stacked">
-                                <li ng-repeat="smallPainting in year"><a href="#{{smallPainting.title | title}}"></a>{{smallPainting.title}}</li>
+                                <li ng-repeat="painting in smallPaintings"><a href="#{{painting.title | title}}"></a>{{painting.title}}</li>
                             </ul>
                         </li>
                     </ul>
