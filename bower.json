@@ -16,6 +16,6 @@
     "tests"
   ],
   "dependencies": {
-    
+    "angular-vimeo-embed": "~0.1.2"
   }
 }
