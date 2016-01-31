@@ -6,12 +6,10 @@
         <h3>Exhibitions</h3>
         <div ng-repeat="exhibition in soloExhibitions | orderBy: 'order' : false" id="{{exhibition.key}}" bs-affix-target><h2>{{exhibition.title}}</h2>
             <div ng-repeat="image in exhibition.images" id="{{exhibition.key}}" class="subgroup" >
-
                 <div class="imagecaption">
-                {{exhibition.title}}, {{exhibition.artists[0]}}
-                {{exhibition.gallery}},
-                {{exhibition.location}},
-                {{exhibition.dates}}{{exhibition.year}}
+                {{exhibition.title}},{{exhibition.gallery}},
+                {{exhibition.location}},{{exhibition.dates}}
+                {{exhibition.year}}
                 </div>
                 <img src="{{image}}"/>
             </div>
@@ -36,28 +34,25 @@
     <section id="VideoProjects" class="group" >
         <h3>Video Projects</h3>
         <h2>Untitled 01</h2>
-        <div id="video1" class="subgroup2" >
-
+        <div id="video1" class="subgroup2">
             <vimeo-video player-id="video01" video-url="'https://vimeo.com/145822431'" player-width="640" player-height="360" bs-affix-target></vimeo-video>
         </div>
         <h2>Untitled 02</h2>
-        <div id="video2" class="subgroup2" >
+        <div id="video2" class="subgroup2">
             <vimeo-video player-id="video02" video-url="'https://vimeo.com/145817802'" player-width="640" player-height="360" bs-affix-target></vimeo-video>
         </div>
         <h2>Untitled 03</h2>
-        <div id="video3" class="subgroup2" >
-            <vimeo-video player-id="video03" video-url="'https://vimeo.com/145822434'"  player-width="640" player-height="360"bs-affix-target></vimeo-video>
+        <div id="video3" class="subgroup2">
+            <vimeo-video player-id="video03" video-url="'https://vimeo.com/145822434'"  player-width="640" player-height="360" bs-affix-target></vimeo-video>
         </div>
         <h2>Untitled 04</h2>
-        <div id="video4" class="subgroup2" >
+        <div id="video4" class="subgroup2">
             <vimeo-video player-id="video04" video-url="'https://vimeo.com/145817859'" player-width="640" player-height="360" bs-affix-target></vimeo-video>
         </div>
         <h2>Untitled (2014)</h2>
-        <div id="video5" class="subgroup2" >
+        <div id="video5" class="subgroup2">
             <vimeo-video player-id="video05" video-url="'https://vimeo.com/julieoppermann/untitled2014'" player-width="640" player-height="360" bs-affix-target></vimeo-video>
         </div>
-
-
     </section>
 
 
