@@ -1,69 +1,92 @@
-<div class="col-xs-2"><navbar></navbar></div>
-<div class="col-xs-10">
+<div class="hidden-xs col-sm-2"><navbar></navbar></div>
+<div class="visible-xs"><navbar2></navbar2></div>
+<div class="col-sm-10 bs-sidebar" role="complementary" data-offset-top="-80" bs-affix-target >
 
-	<section id="Exhibitions" class="group" bs-affix-target>
-	    <h3>Exhibition Views</h3>
-	    <div id="SoloExhibitions" class="subgroup" bs-affix-target>
-	        <h4>Solo Exhibitions</h4>
-	        <div ng-repeat="exhibition in soloExhibitions | orderBy: exhibition.dates.year">
-	        	<div id="{{exhibition.title}}">{{exhibition.title}}</div>
-	    	</div>
-	    </div>
-	    <div id="GroupExhibitions" class="subgroup" bs-affix-target>
-	        <h4>Group Exhibitions</h4>
-	        <div ng-repeat="exhibition in groupExhibitions | orderBy: exhibition.dates.year">
-	        	<div id="{{exhibition.title}}">{{exhibition.title}}</div>
-	    	</div>
-	    </div>
-	</section>
+    <section id="SoloExhibitions" class="group">
+        <h3>Exhibitions</h3>
+        <div ng-repeat="exhibition in soloExhibitions | orderBy: 'order' : false" id="{{exhibition.key}}" bs-affix-target><h2>{{exhibition.title}}</h2>
+            <div ng-repeat="image in exhibition.images" id="{{exhibition.key}}" class="subgroup" >
 
-	<section id="Paintings" class="group" bs-affix-target>
-	    <h3>Paintings</h3>
-	    <div id="LargePaintings" class="subgroup" bs-affix-target>
-	        <h4>Large Paintings</h4>
-	        <div ng-repeat="year in largePaintings.years">
-	        	<div id="{{year}}">{{year}}
-	        		<div ng-repeat="painting in largePaintings | filter: year">{{painting.title}}</br>
-	        		<img src="{{painting.image}}"/>
-	        		</div>
-	        	</div>
-	        </div>
-	    </div>
-	    <div id="SmallPaintings" class="subgroup" bs-affix-target>
-	        <h4>Small Paintings</h4>
-	    </div>
-	</section>
+                <div class="imagecaption">
+                {{exhibition.title}}, {{exhibition.artists[0]}}
+                {{exhibition.gallery}},
+                {{exhibition.location}},
+                {{exhibition.dates}}{{exhibition.year}}
+                </div>
+                <img src="{{image}}"/>
+            </div>
+        </div>
+    </section>
 
-	<section id="WorksOnPaper" class="group" bs-affix-target>
-	    <h3>Works On Paper</h3>
-	    <div id="Silkscreen" class="subgroup" bs-affix-target>
-	        <h4>Silkscreen</h4>
-	    </div>
-	    <div id="Etchings" class="subgroup" bs-affix-target>
-	        <h4>Etchings</h4>
-	    </div>
-	    <div id="PaintingsPaper" class="subgroup" bs-affix-target>
-	        <h4>Paintings On Paper</h4>
-	    </div>
-	</section>
+    <section id="Installations" class="group">
+        <h3>Installations</h3>
+        <div ng-repeat='installation in installations' id='{{installation.key}}' bs-affix-target><h2>{{installation.title}}</h2>
+            <div ng-repeat='image in installation.images' class='subgroup'>
+                <div class="imagecaption">
+                {{installation.title}}&emsp;
+                {{installation.materials}}&emsp;
+                {{installation.location}}&emsp;
+                {{installation.year}}
+                </div>
+                <img src='{{image}}'/>
+            </div>
+        </div>
+    </section>
 
-	<section id="Installations" class="group" bs-affix-target>
-	    <h3>Installations</h3>
-	</section>
-	<section id="VideoProjects" class="group" bs-affix-target>
-	    <h3>Video Projects</h3>
-	</section>
-	<section id="Texts" class="group" bs-affix-target>
-	    <h3>Texts</h3>
-	</section>
-	<section id="CV" class="group" bs-affix-target>
-	    <h3>CV</h3>
-	</section>
-	<section id="News" class="group" bs-affix-target>
-	    <h3>News</h3>
-	</section>
-	<section id="Contact" class="group" bs-affix-target>
-	    <h3>Contact</h3>
-	</section>
+    <section id="VideoProjects" class="group" >
+        <h3>Video Projects</h3>
+        <h2>Untitled 01</h2>
+        <div id="video1" class="subgroup2" >
+
+            <vimeo-video player-id="video01" video-url="'https://vimeo.com/145822431'" player-width="640" player-height="360" bs-affix-target></vimeo-video>
+        </div>
+        <h2>Untitled 02</h2>
+        <div id="video2" class="subgroup2" >
+            <vimeo-video player-id="video02" video-url="'https://vimeo.com/145817802'" player-width="640" player-height="360" bs-affix-target></vimeo-video>
+        </div>
+        <h2>Untitled 03</h2>
+        <div id="video3" class="subgroup2" >
+            <vimeo-video player-id="video03" video-url="'https://vimeo.com/145822434'"  player-width="640" player-height="360"bs-affix-target></vimeo-video>
+        </div>
+        <h2>Untitled 04</h2>
+        <div id="video4" class="subgroup2" >
+            <vimeo-video player-id="video04" video-url="'https://vimeo.com/145817859'" player-width="640" player-height="360" bs-affix-target></vimeo-video>
+        </div>
+        <h2>Untitled (2014)</h2>
+        <div id="video5" class="subgroup2" >
+            <vimeo-video player-id="video05" video-url="'https://vimeo.com/julieoppermann/untitled2014'" player-width="640" player-height="360" bs-affix-target></vimeo-video>
+        </div>
+
+
+    </section>
+
+
+    <section id="CV" class="group" bs-affix-target>
+        <h3>CV</h3>
+        <br>
+        <div class="subgroup2">
+            <img src="/images/cv-art.jpg"/>
+        </div>
+    </section>
+
+    <section id="News" class="group" bs-affix-target>
+        <h3>News</h3>
+        <div class="subgroup">
+        <span><strong>Crossed Signals</strong> Solo exhibition at Keith, Schillerpromenade 2, Berlin Neukoelln. October 23 - November 18, 2015.</span><br><br>
+
+        <span><strong>-Ndo</strong> Group exhibition at Museo Jorge Rando, Malaga. April - August 2015</span><br><br>
+
+        <span><strong>Counterpoint</strong> solo exhibition at Mark Moore Gallery. February 19 - March 21 2015</span><br><br>
+
+        <span><strong>Artist talk</strong> at the Weisman Museum at Pepperdine University in Malibu, CA. February 12, 2015</span><br><br>
+
+        <span><strong>January</strong> Group show at Mixed Greens, Jan 12 - Feb 14, 2015</span><br><br>
+
+        </div>
+    </section>
+
+
+
 </div>
+
 

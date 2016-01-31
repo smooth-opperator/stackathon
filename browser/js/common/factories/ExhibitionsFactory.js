@@ -2,10 +2,9 @@ app.factory('ExhibitionsFactory', function ($http) {
 	var ExhibitionsFactory = {};
 
 	ExhibitionsFactory.fetchSolo = function(){
-		
+
 		return $http.get('/api/exhibitions/')
 			.then(function(response){
-				console.log(response.data, "data from exhibitions factory")
 				return response.data;
 			})
 			.then(function(exhibitions){
@@ -15,7 +14,6 @@ app.factory('ExhibitionsFactory', function ($http) {
 				return soloExhibitions;
 			})
 	}
-
 	ExhibitionsFactory.fetchGroup = function(){
 		return $http.get('/api/exhibitions/')
 			.then(function(response){
@@ -27,7 +25,7 @@ app.factory('ExhibitionsFactory', function ($http) {
 				})
 				return groupExhibitions;
 			})
-	}	
+	}
 
 	return ExhibitionsFactory;
 })

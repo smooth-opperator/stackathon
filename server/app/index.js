@@ -31,7 +31,6 @@ app.use(function (req, res, next) {
 
 });
 
-app.use(express.static('./browser/images'));
 
 app.get('/*', function (req, res) {
     res.sendFile(app.get('indexHTMLPath'));

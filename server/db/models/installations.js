@@ -4,6 +4,7 @@ var _ = require('lodash');
 
 var schema = new mongoose.Schema({
     title: {type: String, required: true},
+    key: {type: String},
     materials: {type: String, required: true},
     dimensions: {type: [Number]},
     unit: {

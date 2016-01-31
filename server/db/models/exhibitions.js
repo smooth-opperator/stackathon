@@ -3,6 +3,8 @@ var mongoose = require('mongoose');
 var _ = require('lodash');
 
 var schema = new mongoose.Schema({
+    key: {type: String},
+    order: {type: Number},
     title: {type: String, required: true},
     gallery: {type: String},
     type: {
@@ -10,17 +12,9 @@ var schema = new mongoose.Schema({
         enum: ['Solo', 'Group']
     },
     artists: {type: [String]},
-    dates: {
-        startM: {type: String},
-        startD: {type: Number},
-        endM: {type: String},
-        endD: {type: Number},
-        year: {type: Number, required: true},
-    },
-    location: {
-        city: {type: String},
-        state: {type: String}
-    },
+    dates: {type: String},
+    year: {type: Number, required: true},
+    location: {type: String},
     images: {type: [String]},
     onWebsite: {type: Boolean, required: true},
     text: {type: String}
