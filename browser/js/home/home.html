@@ -1,64 +1,46 @@
 <div class="hidden-xs col-sm-2"><navbar></navbar></div>
 <div class="visible-xs"><navbar2></navbar2></div>
-<div class="col-sm-10 bs-sidebar" role="complementary" data-offset-top="-80" bs-affix-target >
 
-    <section id="SoloExhibitions" class="group">
+<div class="col-sm-10 bs-sidebar" role="complementary" bs-affix-target>
+
+    <section id="SoloExhibitions" class="group"  bs-affix-target>
         <h3>Exhibitions</h3>
-        <div ng-repeat="exhibition in soloExhibitions | orderBy: 'order' : false" id="{{exhibition.key}}" bs-affix-target><h2>{{exhibition.title}}</h2>
-            <div ng-repeat="image in exhibition.images" id="{{exhibition.key}}" class="subgroup" >
+        <div ng-repeat="exhibition in soloExhibitions" id="{{exhibition.key}}" bs-affix-target><h2>{{exhibition.title}}</h2>
+            <div ng-repeat="image in exhibition.images" class="subgroup" >
                 <div class="imagecaption">
-                {{exhibition.title}},{{exhibition.gallery}},
-                {{exhibition.location}},{{exhibition.dates}}
-                {{exhibition.year}}
+                {{exhibition.title}}, {{exhibition.caption}}
                 </div>
-                <img src="{{image}}"/>
+                <img src={{image}}/>
             </div>
         </div>
     </section>
 
-    <section id="Installations" class="group">
+    <section id="Installations" class="group" bs-affix-target>
         <h3>Installations</h3>
-        <div ng-repeat='installation in installations' id='{{installation.key}}' bs-affix-target><h2>{{installation.title}}</h2>
+        <div ng-repeat="installation in installations" id='{{installation.key}}' bs-affix-target><h2>{{installation.title}}</h2>
             <div ng-repeat='image in installation.images' class='subgroup'>
                 <div class="imagecaption">
-                {{installation.title}}&emsp;
-                {{installation.materials}}&emsp;
-                {{installation.location}}&emsp;
-                {{installation.year}}
+                {{installation.title}}, {{installation.caption}}
                 </div>
-                <img src='{{image}}'/>
+                <img src={{image}}/>
             </div>
         </div>
     </section>
 
-    <section id="VideoProjects" class="group" >
+    <section id="VideoProjects" class="group" bs-affix-target>
         <h3>Video Projects</h3>
-        <h2>Untitled 01</h2>
-        <div id="video1" class="subgroup2">
-            <vimeo-video player-id="video01" video-url="'https://vimeo.com/145822431'" player-width="640" player-height="360" bs-affix-target></vimeo-video>
-        </div>
-        <h2>Untitled 02</h2>
-        <div id="video2" class="subgroup2">
-            <vimeo-video player-id="video02" video-url="'https://vimeo.com/145817802'" player-width="640" player-height="360" bs-affix-target></vimeo-video>
-        </div>
-        <h2>Untitled 03</h2>
-        <div id="video3" class="subgroup2">
-            <vimeo-video player-id="video03" video-url="'https://vimeo.com/145822434'"  player-width="640" player-height="360" bs-affix-target></vimeo-video>
-        </div>
-        <h2>Untitled 04</h2>
-        <div id="video4" class="subgroup2">
-            <vimeo-video player-id="video04" video-url="'https://vimeo.com/145817859'" player-width="640" player-height="360" bs-affix-target></vimeo-video>
-        </div>
-        <h2>Untitled (2014)</h2>
-        <div id="video5" class="subgroup2">
-            <vimeo-video player-id="video05" video-url="'https://vimeo.com/julieoppermann/untitled2014'" player-width="640" player-height="360" bs-affix-target></vimeo-video>
+        <div ng-repeat="video in videos" id="{{video.key}}" bs-affix-target><h2>{{video.title}}</h2>
+            <div ng-repeat='image in video.images' class='subgroup2'>
+                <div class="imagecaption">
+                {{video.title}}, {{video.caption}}
+                </div>
+                <vimeo-video player-id="{{video.key}}" video-url="image" player-width="640" player-height="360"></vimeo-video>
+            </div>
         </div>
     </section>
-
 
     <section id="CV" class="group" bs-affix-target>
         <h3>CV</h3>
-        <br>
         <div class="subgroup2">
             <img src="/images/cv-art.jpg"/>
         </div>
@@ -85,3 +67,23 @@
 </div>
 
 
+        <!-- <h2>Untitled 01</h2> -->
+        <!-- <div id="video1" class="subgroup2">
+            <vimeo-video player-id="video01" video-url="'https://vimeo.com/145822431'" player-width="640" player-height="360" bs-affix-target></vimeo-video>
+        </div>
+        <h2>Untitled 02</h2>
+        <div id="video2" class="subgroup2">
+            <vimeo-video player-id="video02" video-url="'https://vimeo.com/145817802'" player-width="640" player-height="360" bs-affix-target></vimeo-video>
+        </div>
+        <h2>Untitled 03</h2>
+        <div id="video3" class="subgroup2">
+            <vimeo-video player-id="video03" video-url="'https://vimeo.com/145822434'"  player-width="640" player-height="360" bs-affix-target></vimeo-video>
+        </div>
+        <h2>Untitled 04</h2>
+        <div id="video4" class="subgroup2">
+            <vimeo-video player-id="video04" video-url="'https://vimeo.com/145817859'" player-width="640" player-height="360" bs-affix-target></vimeo-video>
+        </div>
+        <h2>Untitled (2014)</h2>
+        <div id="video5" class="subgroup2">
+            <vimeo-video player-id="video05" video-url="'https://vimeo.com/julieoppermann/untitled2014'" player-width="640" player-height="360" bs-affix-target></vimeo-video>
+        </div> -->
