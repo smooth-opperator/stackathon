@@ -6,7 +6,6 @@ var favicon = require('serve-favicon');
 module.exports = function (app) {
 
     var root = app.getValue('projectRoot');
-
     var npmPath = path.join(root, './node_modules');
     var bowerPath = path.join(root, './bower_components');
     var publicPath = path.join(root, './public');

@@ -1,23 +1,41 @@
 <nav class="bs-sidenav" role="nav">
     <div class="title">JULIE OPPERMANN</div>
     <ul class="navbar nav fixed" id="sidebar" bs-scrollspy-list>
-        <li data-target="#SoloExhibitions" >
+        <li>
             <a href="#SoloExhibitions">Exhibitions</a>
             <ul class="nav">
-                <li ng-repeat="exhibition in soloExhibitions | orderBy: 'order' : false" data-target="#{{exhibition.key}}" bs-scrollspy>
+                <li ng-repeat="exhibition in soloExhibitions">
                     <a href="#{{exhibition.key}}">{{exhibition.title}}</a>
                 </li>
             </ul>
         </li>
-        <li data-target="#Installations">
+        <li>
             <a href="#Installations">Installations</a>
             <ul class="nav">
-                <li ng-repeat="installation in installations" data-target="#{{installation.key}}" bs-scrollspy>
+                <li ng-repeat="installation in installations">
                     <a href="#{{installation.key}}">{{installation.title}}</a>
                 </li>
             </ul>
         </li>
-        <li data-target="#VideoProjects" bs-scrollspy-list>
+        <li>
+            <a href="#VideoProjects">Videos</a>
+            <ul class="nav">
+                <li ng-repeat="video in videos">
+                    <a href="#{{video.key}}">{{video.title}}</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#CV">CV</a>
+        </li>
+        <li>
+            <a href="#News">News</a>
+        </li>
+    </ul>
+</nav>
+
+
+        <!-- <li data-target="#VideoProjects" bs-scrollspy-list>
             <a href="#VideoProjects">Videos</a>
             <ul class="nav">
                 <li data-target="#video1">
@@ -36,12 +54,4 @@
                     <a href="#video5">Untitled (2014)</a>
                 </li>
             </ul>
-        </li>
-        <li data-target="#CV" >
-            <a href="#CV">CV</a>
-        </li>
-        <li data-target="#News" >
-            <a href="#News">News</a>
-        </li>
-    </ul>
-</nav>
+        </li> -->
