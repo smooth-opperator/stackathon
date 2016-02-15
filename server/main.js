@@ -11,7 +11,7 @@ var server = require('http').createServer();
 var createApplication = function () {
     var app = require('./app');
     server.on('request', app); // Attach the Express application.
-    require('./io')(server);
+    //require('./io')(server);
 };
 
 var startServer = function () {
@@ -24,7 +24,5 @@ var startServer = function () {
 
 };
 
-startDb.then(createApplication).then(startServer).catch(function (err) {
-    console.error(chalk.red(err.stack));
-    process.kill(1);
-});
+createApplication();
+startServer();
