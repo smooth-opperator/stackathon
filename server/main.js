@@ -11,7 +11,7 @@ var server = require('http').createServer();
 var createApplication = function () {
     var app = require('./app');
     server.on('request', app); // Attach the Express application.
-    require('./io')(server);
+    //require('./io')(server);
 };
 
 //var startDbPromise = new Promise(function (resolve, reject) {
