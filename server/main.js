@@ -14,11 +14,6 @@ var createApplication = function () {
     //require('./io')(server);
 };
 
-//var startDbPromise = new Promise(function (resolve, reject) {
-//     db.on('open', resolve);
-//     db.on('error', reject);
-// });
-
 var startServer = function () {
 
     var PORT = process.env.PORT || 1337;
