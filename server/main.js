@@ -14,6 +14,11 @@ var createApplication = function () {
     require('./io')(server);
 };
 
+//var startDbPromise = new Promise(function (resolve, reject) {
+//     db.on('open', resolve);
+//     db.on('error', reject);
+// });
+
 var startServer = function () {
 
     var PORT = process.env.PORT || 1337;
@@ -24,7 +29,5 @@ var startServer = function () {
 
 };
 
-startDb.then(createApplication).then(startServer).catch(function (err) {
-    console.error(chalk.red(err.stack));
-    process.kill(1);
-});
+createApplication();
+startServer();
