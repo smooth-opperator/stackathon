@@ -1,0 +1,10 @@
+{
+  "firebase": "julieoppermann",
+  "public": "browser",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "browser/images",
+    "**/node_modules/**"
+  ]
+}
