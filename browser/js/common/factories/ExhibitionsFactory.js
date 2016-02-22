@@ -120,7 +120,7 @@ app.factory('ExhibitionsFactory', function () {
                     '/images/roepke4.jpg',
                     '/images/roepke5.jpg',
                     '/images/roepke6.jpg',
-                    '/images/PR_roepke5.png'
+                    '/images/PR_roepke.png'
 
                 ]
                 // images: [
@@ -139,8 +139,8 @@ app.factory('ExhibitionsFactory', function () {
                 caption: 'Times Square Gallery, December 12, 2012 - January 16, 2013, New York',
                 order: 6,
                 images: [
-                    '/images/thesis)install1.jpg',
-                    '/images/thesis)install2.jpg'
+                    '/images/thesis_install1.jpg',
+                    '/images/thesis_install2.jpg'
 
                 ]
                 // images: [
