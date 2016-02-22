@@ -1,7 +1,7 @@
-<div class="hidden-xs col-sm-2"><navbar></navbar></div>
-<div class="visible-xs"><navbar2></navbar2></div>
+<div class="hidden-sm col-md-2"><navbar></navbar></div>
+<div class="visible-sm"><navbar2></navbar2></div>
 
-<div class="col-sm-10 bs-sidebar" role="complementary" bs-affix-target>
+<div class="col-md-10 bs-sidebar" role="complementary" bs-affix-target>
 
     <section id="SoloExhibitions" class="group"  bs-affix-target>
         <h3>Exhibitions</h3>
@@ -17,8 +17,8 @@
 
     <section id="Installations" class="group" bs-affix-target>
         <h3>Installations</h3>
-        <div ng-repeat="installation in installations" id='{{installation.key}}' bs-affix-target><h2>{{installation.title}}</h2>
-            <div ng-repeat='image in installation.images' class='subgroup'>
+        <div ng-repeat="installation in installations" id="{{installation.key}}" bs-affix-target><h2>{{installation.title}}</h2>
+            <div ng-repeat="image in installation.images" class="subgroup">
                 <div class="imagecaption">
                 {{installation.title}}, {{installation.caption}}
                 </div>
@@ -30,7 +30,7 @@
     <section id="VideoProjects" class="group" bs-affix-target>
         <h3>Video Projects</h3>
         <div ng-repeat="video in videos" id="{{video.key}}" bs-affix-target><h2>{{video.title}}</h2>
-            <div ng-repeat='image in video.images' class='subgroup2'>
+            <div ng-repeat="image in video.images" class="subgroup2">
                 <div class="imagecaption">
                 {{video.title}}, {{video.caption}}
                 </div>
@@ -42,7 +42,7 @@
     <section id="CV" class="group" bs-affix-target>
         <h3>CV</h3>
         <div class="subgroup2">
-            <img ng-src="/images/cv-art.png"/>
+            <img src="/images/cv-art.png"/>
         </div>
     </section>
 
