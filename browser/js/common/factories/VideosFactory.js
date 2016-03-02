@@ -42,7 +42,7 @@ app.factory('VideosFactory', function () {
             caption: 'Single-Channel Video Projection (2:00 minutes, loop), Berlin, 2014',
             order: 5,
             images: [
-                'https://vimeo.com/145817859'
+                'https://vimeo.com/110596110'
             ]
         }
 
@@ -50,15 +50,3 @@ app.factory('VideosFactory', function () {
     }
 
 })
-
-
-
-    // var VideosFactory = {};
-
-    // VideosFactory.fetchAll = function(){
-    //     return $http.get('/api/videos/')
-    //         .then(function(response){
-    //             return response.data;
-    //         })
-    // }
-    // return VideosFactory;

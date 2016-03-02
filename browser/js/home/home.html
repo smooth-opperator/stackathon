@@ -3,7 +3,7 @@
 
 <div class="col-md-10 bs-sidebar" role="complementary" bs-affix-target>
 
-    <section id="SoloExhibitions" class="group"  bs-affix-target>
+    <section id="SoloExhibitions" class="group" bs-affix-target>
         <h3>Exhibitions</h3>
         <div ng-repeat="exhibition in soloExhibitions" id="{{exhibition.key}}" bs-affix-target><h2>{{exhibition.title}}</h2>
             <div ng-repeat="image in exhibition.images" class="subgroup" >
@@ -29,12 +29,12 @@
 
     <section id="VideoProjects" class="group" bs-affix-target>
         <h3>Video Projects</h3>
-        <div ng-repeat="video in videos" id="{{video.key}}" bs-affix-target><h2>{{video.title}}</h2>
-            <div ng-repeat="image in video.images" class="subgroup2">
+        <div ng-repeat="video in videos" id="{{video.key}}" class="videoContainer" bs-affix-target><h2>{{video.title}}</h2>
+            <div ng-repeat="image in video.images" class="subgroup">
                 <div class="imagecaption">
                 {{video.title}}, {{video.caption}}
                 </div>
-                <vimeo-video player-id="{{video.key}}" video-url="image" player-width="640" player-height="360"></vimeo-video>
+                <vimeo-video player-id="0{{video.key}}" video-url="image" player-width="640" player-height="360"></vimeo-video>
             </div>
         </div>
     </section>
