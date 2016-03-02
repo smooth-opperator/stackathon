@@ -7,26 +7,46 @@
 
 .top-nav {
   width: 100%;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
   top: 0px;
-  position: fixed-top;
-  /*a{
-    display: block;
-    float: left;
-
-  }*/
+  min-height: 23px;
+  background: gray;
+  opacity: 0.9;
 }
 
 .menu {
-  background-color: white;
-  word-spacing: 1em;
+  display: block;
+  float: left;
+  clear: none;
+  li {
+    display: block;
+    float: left;
+    margin-left: 5%;
+    color: white;
+    font-size: 1.4rem;
+    /*&.active a{
+        font-weight: 400;
+        color: red;
+      }*/
+    a {
+      color: white;
+      font-weight: 200;
+      text-decoration: none;
 
+      &:hover{
+        color: blue;
+      };
+    }
+   }
 }
 
-.name {
-  background-color: white;
-  padding-left: 5%;
-
-}
+#name{
+        margin-left: -3%;
+        margin-right: 5%;
+        color: black;
+      }
 
 navbar {
   display: block;
@@ -62,7 +82,6 @@ navbar {
       padding-bottom: 1px;
       padding-left: 30px;
       font-weight: 300;
-      /*background-color: red;*/
   }
      /* double-nested active links */
   .bs-sidenav .nav .nav .nav>.active>a,
@@ -102,21 +121,11 @@ navbar {
 
   }
 
-   /* hide all (inactive) double nested list */
-  /*.bs-sidenav .nav .nav ul.nav {
-      display: block;
-  }*/
-
   /* show active nested list */
   .bs-sidenav .nav>.active>ul.nav {
       display: block;
   }
 
-  /* show active double nested list */
-  /*.bs-sidenav .nav .nav>.active>ul.nav {
-      display: block;
-
-  }*/
   .container {
     width: 100%;
     max-width: 1340px;
