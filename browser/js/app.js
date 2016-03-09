@@ -1,5 +1,5 @@
 'use strict';
-window.app = angular.module('FullstackGeneratedApp', ['ui.router', 'ngAnimate', 'mgcrea.ngStrap', 'vimeoEmbed']);
+window.app = angular.module('FullstackGeneratedApp', ['ui.router', 'ngAnimate', 'mgcrea.ngStrap']);
 
 app.config(function ($urlRouterProvider, $locationProvider) {
     // This turns off hashbang urls (/#about) and changes it to something normal (/about)
@@ -10,3 +10,4 @@ app.config(function ($urlRouterProvider, $locationProvider) {
 });
 
 
+// , 'vimeoEmbed'
