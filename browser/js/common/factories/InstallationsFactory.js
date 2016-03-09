@@ -11,12 +11,6 @@ app.factory('InstallationsFactory', function () {
                     '/images/counterpoint_windowdetail.jpg',
                     '/images/counterpoint_windowdetail2.jpg'
                 ]
-            // images: [
-            //     'http://i.imgur.com/VSGcL8v.jpg',
-            //     'http://i.imgur.com/b1v409F.jpg',
-            //     'http://i.imgur.com/pjkjb2m.jpg',
-            //     'http://i.imgur.com/r4JHa2i.jpg'
-            // ]
         },
         udkRundgang : {
             key: 'udkRundgang',
@@ -28,10 +22,6 @@ app.factory('InstallationsFactory', function () {
                     '/images/udk-floor2_700.jpg',
                     '/images/udk-floor3.jpg'
                 ]
-            // images: [
-            //     'http://i.imgur.com/AzJfk44.jpg',
-            //     'http://i.imgur.com/hIciWpd.jpg'
-            // ]
         },
         screening : {
             key: 'screening',
@@ -41,10 +31,6 @@ app.factory('InstallationsFactory', function () {
             images: [
                     '/images/floatingpanel.jpg'
                 ]
-
-            // images: [
-            //     'http://i.imgur.com/Q7qgkMp.jpg'
-            // ]
         },
         fold : {
             key: 'fold',
@@ -54,10 +40,6 @@ app.factory('InstallationsFactory', function () {
             images: [
                     '/images/fold.jpg'
                 ]
-
-            // images: [
-            //     'http://i.imgur.com/sHIKGZN.jpg'
-            // ]
         },
         cube : {
             key: 'cube',
@@ -77,11 +59,6 @@ app.factory('InstallationsFactory', function () {
                     '/images/moire1104a.jpg',
                     '/images/moire1104b.jpg'
                 ]
-
-            // images: [
-            //     'http://i.imgur.com/a3xwEdW.jpg',
-            //     'http://i.imgur.com/PSFzk0Z.jpg'
-            // ]
         },
         reflection : {
             key: 'reflection',
@@ -93,23 +70,8 @@ app.factory('InstallationsFactory', function () {
                     '/images/wallfloor2.jpg'
                 ]
 
-            // images: [
-            //     'http://i.imgur.com/OZDSwjT.jpg',
-            //     'http://i.imgur.com/wdDrEv8.jpg'
-            // ]
         }
 
     }
 
-})
-
-
-// var InstallationsFactory = {};
-
-//     InstallationsFactory.fetchAll = function(){
-//         return $http.get('/api/installations/')
-//             .then(function(response){
-//                 return response.data;
-//             })
-//     }
-//     return InstallationsFactory;
+});

@@ -46,7 +46,6 @@ app.factory('VideosFactory', function () {
             ]
         }
 
-
     }
 
-})
+});
