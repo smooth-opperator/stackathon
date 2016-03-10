@@ -4,6 +4,7 @@
 
 body {
   background-image: url("/images/bodybackground.jpg");
+  position: relative;
 }
 
 @mixin clearfix {
