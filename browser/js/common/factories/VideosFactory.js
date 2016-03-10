@@ -6,7 +6,8 @@ app.factory('VideosFactory', function () {
             caption: '(Crossed Signals), Single-Channel Video Projection (4:00 minutes, loop), Berlin, 2015',
             order: 1,
             images: [
-                'https://vimeo.com/145822431'
+                'http://player.vimeo.com/video/145822431'
+
             ]
         },
         untitled02 : {
@@ -15,7 +16,7 @@ app.factory('VideosFactory', function () {
             caption: '(Crossed Signals), Single-Channel Video Projection (4:00 minutes, loop), Berlin, 2015',
             order: 2,
             images: [
-                'https://vimeo.com/145817802'
+                'http://player.vimeo.com/video/145817802'
             ]
         },
         untitled03 : {
@@ -24,7 +25,7 @@ app.factory('VideosFactory', function () {
             caption: '(Crossed Signals), Single-Channel Video Projection (4:00 minutes, loop), Berlin, 2015',
             order: 3,
             images: [
-                'https://vimeo.com/145822434'
+                'http://player.vimeo.com/video/145822434'
             ]
         },
         untitled04 : {
@@ -33,7 +34,7 @@ app.factory('VideosFactory', function () {
             caption: '(Crossed Signals), Single-Channel Video Projection (4:00 minutes, loop), Berlin, 2015',
             order: 4,
             images: [
-                'https://vimeo.com/145817859'
+                'http://player.vimeo.com/video/145817859'
             ]
         },
         untitled2014 : {
@@ -42,7 +43,7 @@ app.factory('VideosFactory', function () {
             caption: 'Single-Channel Video Projection (2:00 minutes, loop), Berlin, 2014',
             order: 5,
             images: [
-                'https://vimeo.com/110596110'
+                'http://player.vimeo.com/video/110596110'
             ]
         }
 
