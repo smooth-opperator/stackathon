@@ -11,3 +11,5 @@ I also wanted to include some of my newer video projects, which had to be embedd
 responsive embed tags that maintain a fixed 16x9 aspect ratio, so that the videos can scale with the page but won't incur strange 
 artifacts that might otherwise distort the picture.
 
+See it here: www.julieoppermann.com
+
