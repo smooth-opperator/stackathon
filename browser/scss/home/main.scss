@@ -6,6 +6,7 @@
     width: 100%;
     height: 100%;
     margin-bottom: 5%;
+
     h3 {
       color: white;
       font-size: 4em;
@@ -14,6 +15,7 @@
       margin-left: 2%;
       width: 95%;
     }
+
     h2 {
       color: silver;
       font-size: 1.5em;
@@ -28,7 +30,6 @@
       background: white;
       width: 95%;
     }
-
 }
 
 .group .subgroup {
@@ -39,6 +40,7 @@
   width: 95%;
   height: 100%;
   display: block;
+
   img {
     padding-top: none;
     padding-bottom: 5%;
@@ -47,12 +49,14 @@
     display: block;
     margin: auto;
   }
+
   span {
     padding-left: 10%;
     padding-top: 20%;
     padding-right: 5%;
     padding-bottom: 20%;
   }
+
   .imagecaption{
     padding-bottom: none;
     margin: 0 auto;
@@ -60,25 +64,23 @@
     background-color: none;
     text-align: center;
   }
-
 }
 
 .group .subgroup2 {
   width: 95%;
   height: 100%;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  padding: 5%;
   margin-left: 2%;
   margin-bottom: 5%;
   background: white;
   display: block;
+
   img {
     max-width: 100%;
     display: block;
     margin: 0 auto;
     border: 1px solid #D3D3D3;
   }
-
 }
 
 .group .subgroup iframe {
@@ -91,7 +93,8 @@
   min-height: 400px;
 }
 
-
-
-
-
+.section-header {
+  font-size: 1.5em;
+  font-weight: 200;
+  padding: 2% 0;
+}
